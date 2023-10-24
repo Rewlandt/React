@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Head from './Components/Head.js';
+import Cards from './Components/Card.js';
+import Forms from './Components/Forms.js';
+import Carusel from './Components/Carousel.js';
+import Breadcrumbs from './Components/Breadcrumbs.js';
+import Clock from './Components/Clockwork';
+import {Container} from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Container>
+      <header className='my-5'>
+        <Head/>
       </header>
-    </div>
+      <body>
+        <Breadcrumbs/>
+        <Carusel/>
+        <Cards/>
+        <Forms/>
+        <script src="./clockscript.js"></script>
+      </body>
+      <footer className='my-5'>
+        <p class="text-center">© WebSite 2023/<Clock/></p>
+      </footer>
+    </Container>
   );
 }
 
